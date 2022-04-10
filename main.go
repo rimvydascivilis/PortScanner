@@ -27,15 +27,12 @@ func main() {
 	fmt.Println("open ports:", openPortsCount)
 }
 
-func scanPort(ip string, port int, openPortsCount *int, wg *sync.WaitGroup) bool {
+func scanPort(ip string, port int, openPortsCount *int, wg *sync.WaitGroup) {
 	_, err := net.Dial("tcp", fmt.Sprintf("%v:%v", ip, port))
-	wg.Done()
 
 	if err == nil {
 		fmt.Printf("%v port is open\n", port)
 		*openPortsCount++
-		return true
 	}
-
-	return false
+	wg.Done()
 }
