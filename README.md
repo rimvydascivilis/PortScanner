@@ -9,6 +9,6 @@
 
   ```./PortScanner -p <port range from>:<port range to> <host>```
   
- #### Example:
+ #### Examples:
   - ```./PortScanner -p 100:1500 127.0.0.1```
   - ```./PortScanner localhost``` (default port range 0-65535)
