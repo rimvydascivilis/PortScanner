@@ -29,7 +29,6 @@ func main() {
 		}
 		startNmapScan(host, &openPorts)
 	}
-	fmt.Println("NEW")
 }
 
 func findOpenTcpPorts(host string, portRangeStart int, portRangeEnd int, openPorts *[]int) {
