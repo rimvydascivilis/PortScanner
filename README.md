@@ -1,4 +1,5 @@
 # Port scanner
+## It uses go/net/http package to scan ports after scan it can generate nmap command and run it.
 
 ## Usage
 ### 1. From the command line in the PortScanner directory, run the go build command to compile the code into an executable
